@@ -2,12 +2,13 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import AppLayout from "@/components/layouts/AppLayout";
 import { Login } from "@/components/login/Login";
 import Dashboard from "@/pages/dashboard/Dashboard";
-import IncidentesReportes from "@/pages/licenciado/incidentes_reportes/incidentes_reportes";
-import Inspecciones from "@/pages/licenciado/Inspecciones/inspeccion";
-import EPPCapacitacion from "@/pages/licenciado/epp_capacitaciones/epp_capacitacion";
-import Documentacion from "@/pages/licenciado/documentos_normas/documentacion";
-import MisObras from "@/pages/ingeniero/mis_obras/mis_obras";
-import Reportes from "@/pages/ingeniero/reportes/reportes";
+import IncidentesReportes from "@/pages/incidentes_reportes/incidentes_reportes";
+import Inspecciones from "@/pages/inspecciones/inspeccion";
+import EPPCapacitacion from "@/pages/epp_capacitaciones/epp_capacitacion";
+import Documentacion from "@/pages/documentos_normas/documentacion";
+import Reportes from "@/pages/reportes/reportes";
+import ObrasPage from "@/pages/mis_obras/mis_obras";
+
 
 export function Navigation() {
   return (
@@ -58,7 +59,7 @@ export function Navigation() {
         path="/obras"
         element={
           <AppLayout>
-            <MisObras/>
+            <ObrasPage/>
           </AppLayout>
         }
       />

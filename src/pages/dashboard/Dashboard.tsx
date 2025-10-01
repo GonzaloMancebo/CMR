@@ -2,9 +2,9 @@
 
 import { useContext } from "react"
 import { LoginContext } from "@/context/LoginContext"
-import LicenciadoDashboard from "./Dashboard-Lic"
-import IngenieroDashboard from "./Dashboard-Ing"
 import Loading from "@/components/loading/loading"
+import LicenciadoDashboard from "./Licenciado/Dashboard-Lic"
+import DashboardPage from "./Ingeniero/Dashboard-Ing"
 
 
 export default function Dashboard() {
@@ -22,7 +22,7 @@ export default function Dashboard() {
   }
 
   if (role.name === "Ingeniero") {
-    return <IngenieroDashboard />
+    return <DashboardPage />
   }
 
   // Si es otro rol
