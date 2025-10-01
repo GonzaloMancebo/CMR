@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
-import { auth, firestore } from "@/services/firebase";
-import {
-  collection,
-  getDocs,
-  query,
-  where,
-} from "firebase/firestore";
+import { auth, firestore } from "@/lib/firebase";
+import { collection, getDocs, query, where } from "firebase/firestore";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { LoginContext } from "@/context/LoginContext";
 import Loading from "@/components/loading/loading";
@@ -62,10 +57,11 @@ export const LoginProvider = ({ children }) => {
   };
 
   if (isLoading) {
-    return <div>
-<Loading/>
-
-    </div>;
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
   }
 
   return (
